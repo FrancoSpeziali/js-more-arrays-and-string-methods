@@ -1,4 +1,13 @@
-# Project Name
+# Loop the loop!
+
+Don't get stuck in a loop!
+
+We can use loops to make hard work easy by having the computer do the work
+for us.
+
+## Installation
+
+Run `npm install`
 
 ## Usage
 
@@ -53,3 +62,7 @@ Once this is done, create a **Pull Request** from the `solution` branch to the `
 via the GitHub interface.
 
 ## Assignments
+
+See the file `assignments.js` for details
+
+![Roller coaster](./rollercoaster.jpg)
