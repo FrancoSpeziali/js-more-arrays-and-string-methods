@@ -2,41 +2,30 @@
 
     Assignment 1
 
-    We know we can use `+` in JavaScript to concatenate 2 strings together
+    Update the function below to:
 
-    For example, "Hello " + "you!" = "Hello you!"
+    1. Accept an argument "text"
 
-    Using this knowledge, and the knowledge of FOR loops, with the following FUNCTION:
+    2. Set "text" to lowercase using the toLowerCase() method
 
-    RETURN a single string with the string "Hello " repeated 10 times (including space).
-
-    The result should look like:
-
-    "Hello Hello Hello Hello Hello Hello Hello Hello Hello Hello "
+    3. RETURN the result
 
 */
 
 function assignment1() {
-    let string = "";
-
-    for(let a = 0; a < 10; a += 1) {
-        string += "Hello ";
-    }
-
-    return string;
 }
 
 /*
 
     Assignment 2
 
-    Following on from the previous example, with the following FUNCTION:
+    Update the function below to:
 
-    RETURN a single string with the string "Hamburg " repeated 5 times (including space).
+    1. Accept an argument "text"
 
-    The result should look like:
+    2. Set "text" to uppercase using the toUpperCase() method
 
-    "Hamburg Hamburg Hamburg Hamburg Hamburg "
+    3. RETURN the result
 
 */
 
@@ -47,17 +36,13 @@ function assignment2() {
 
     Assignment 3
 
-    Following on from the previous example, with the following FUNCTION:
+    Update the function below to:
 
-    Use a FOR loop to replicate the string "love" 6 times
+    1. Accept an argument "text"
 
-    RETURN the result of the loop above along with the word "I" at the start
+    2. Remove (trim) all whitespace using the trim() method
 
-    and "Hamburg" at the end.
-
-    The result should look like:
-
-    "I love love love love love love love Hamburg"
+    3. RETURN the result
 
 */
 
@@ -68,21 +53,21 @@ function assignment3() {
 
     Assignment 4
 
-    With the following FUNCTION:
+    Update the function below to:
 
-    Use a FOR loop and RETURN the numbers 0 1 2 3 4 5 6 7 8 9 10 as a string,
+    1. Accept an argument "text"
 
-    with a space in between each number.
+    2. Check that the argument "text" is of typeof "string"
 
-    Hint: We can concatenate a number with a string, and JavaScript will convert the
+    3. IF argument "text" is not of typeof "string", return undefined
 
-    number into a string. For example:
+    4. IF argument "text" is of typeof "string":
 
-    "I am " + 5 + " years old." = "I am 5 years old."
+        - trim "text"
 
-    The result should look like:
+        - set "text" to lower case
 
-    "0 1 2 3 4 5 6 7 8 9 10 "
+        - RETURN the result
 
 */
 
@@ -93,13 +78,23 @@ function assignment4() {
 
     Assignment 5
 
-    With the following FUNCTION:
+    Update the function below to:
 
-    Use a FOR loop and RETURN the result of adding the numbers 0 - 1000
+    1. Accept an argument "text"
 
-    For example, to find the result of adding the numbers 0 - 5
+    2. Search within the "text" argument for the word "piano" and
 
-    0 + 1 + 2 + 3 + 4 + 5 = 15
+        REPLACE it with the word "guitar" using the replace() method
+        
+        For example:
+
+        "I like playing the piano"
+
+        Should be come:
+
+        "I like playing the guitar"
+
+    3. RETURN the result
 
 */
 
@@ -110,17 +105,33 @@ function assignment5() {
 
     Assignment 6
 
-    With the following FUNCTION:
+    Update the function below to:
 
-    Use a FOR loop and RETURN the numbers 5 10 15 20 25 30 35 40 45 50 as a string,
+    1. Accept an argument "array"
 
-    with a space in between each number.
+    2. Loop through the array and:
 
-    Hint: We don't have to increase the value in our loop by 1, we can use other values
+        - check if each item is equal to typeof "string"
 
-    The result should look like:
+    3. For each item that is equal to typeof "string":
 
-    "5 10 15 20 25 30 35 40 45 50 "
+        - concatenate (join) the strings together, separating them with a space " "
+
+        For example, assume the following is our array:
+
+        ["red", 33, "green", "blue"]
+
+        We could concatenate (join) the words "red", "green", "blue" together, ignoring
+
+        the number 33
+
+        In this case the result would be:
+
+        "red green blue"
+
+    5. Trim the result
+
+    4. RETURN the result
 
 */
 
@@ -131,167 +142,105 @@ function assignment6() {
 
     Assignment 7
 
-    With the following FUNCTION:
+    Update the function below to:
 
-    Access index 2 from the following array, and RETURN the result.
+    1. Accept an argument "array"
 
-    The result should look like:
+    2. Loop through the array and:
 
-    "Blue"
+        - check if each item is equal to typeof "number"
+
+    3. For each item that is equal to typeof "number":
+
+        - add these numbers together
+        
+        For example, assume the following is our array:
+
+        ["red", 33, "green", 9, 6 ]
+
+        We could add the numbers 33, 9 and 6
+
+        In this case the result would be:
+
+        48
+
+    4. RETURN the result
 
 */
 
 function assignment7() {
-    const array = ["Red", "Green", "Blue"];
 }
 
 /*
 
     Assignment 8
 
-    With the following FUNCTION:
+    Update the function below to:
 
-    Use a FOR loop to loop through the string contents of the array.
+    1. Accept an argument "array"
 
-    HINT: For the upper value, we can use the array property "length"
+    2. Loop through the array and:
 
-    For example, using the "length" property we can find the length of an array
+        - check if each item is equal to typeof "boolean"
 
-    NOTE: The last index of an array is always 1 value lower than the total length
+    3. For each item that is equal to typeof "boolean":
 
-    This is because Arrays start with 0 as their first index
+        - check if the value is equal to true
 
-    For example:
+        - count the number of booleans equal to true
+        
+        For example, assume the following is our array:
 
-    const array = ["hello", "hi"];
+        [ true, false, true, true, false ]
 
-    array.length returns 2
+        The number of booleans equal to true is 3
 
-    However "hello" has index 0, "hi" has index 1
+        In this case the result would be:
 
-    Using this knowledge join (concatenate) each string into 1 single string, adding a space in between each string
+        3
 
-    RETURN the single string you created in the previous step
-
-    The result should look like:
-
-    "I hate JavaScript ! "
+    4. RETURN the result
 
 */
 
 function assignment8() {
-    const array = ["I", "hate", "JavaScript", "!"];
 }
 
 /*
 
     Assignment 9
 
-    With the following FUNCTION:
+    Update the function below to:
 
-    Just like in the previous assignment,
+    1. Accept an argument "array"
 
-    use a FOR loop to loop through the string contents of the array.
+    2. Loop through the array and:
 
-    Create a new string with the contents of the array,
+        - keep a count "strings" of how many items are equal to typeof "string"
 
-    but replacing the word "hate" with the word "love"
+        - keep a count "numbers" of how many items are equal to typeof "number"
 
-    The result should look like:
+        - keep a count "booleans" of how many items are equal to typeof "boolean"
 
-    "I love JavaScript ! "
+    3. Store these counts in an object
+
+        For example, this array:
+
+        [ 23, 45, "hello", "hallo", true, false ]
+
+        Will return this object:
+
+        {
+            numbers: 2,
+            strings: 2,
+            booleans: 2
+        }
+
+    4. RETURN the object
 
 */
 
 function assignment9() {
-    const array = ["I", "hate", "JavaScript", "!"];
-}
-
-/*
-
-    Assignment 10
-
-    With the following FUNCTION:
-
-    Use a FOR loop to loop through the string contents of the array.
-
-    RETURN the total number of times the string "banana" is found
-
-    The result should look like:
-
-    3
-
-*/
-
-function assignment10() {
-    const array = [
-        "banana",
-        "orange",
-        "banana",
-        "banana",
-        "apple",
-        "pear",
-        "apricot",
-        "orange"
-    ];
-}
-
-/*
-
-    Assignment 11
-
-    With the following FUNCTION:
-
-    Use a FOR loop to loop through the contents of the array.
-
-    The array has content of many different datatypes.
-
-    RETURN the total number of items which are of the datatype "number"
-
-    The result should look like:
-
-    5
-
-*/
-
-function assignment11() {
-    const array = [12, "hello", "forty-five", 1, true, 5, 7, 8];
-}
-
-/*
-
-    Assignment 12
-
-    With the following FUNCTION:
-
-    Use a FOR loop to loop through the numbers of the array.
-
-    RETURN the total number of prime numbers which can be found in the array
-
-    A prime number is a number which can only be divided with itself and the number 1
-
-    For example:
-
-    5 is a prime number. It can only be divided with itself and the number 1
-
-    We can use the modulus operator (%) to determine if a number divides with a remainder or not
-
-    For example:
-
-    5 % 5 = 0 // 5 divide by 5 = (0) no remainder
-
-    5 % 1 = 0 // 5 divide by 1 = (0) no remainder
-
-    5 % 4 = 1 // 5 divider by 4 = (1) 1 remainder (5 = 4 + 1)
-
-    The result should look like:
-
-    9
-
-*/
-
-function assignment12() {
-    const array = [5, 54, 3, 312, 5, 6, 8, 100, 37];
 }
 
 /*
@@ -302,34 +251,27 @@ function assignment12() {
 
 const colors = require("colors");
 
-const results = [
-    { result: assignment1(), expected: "Hello Hello Hello Hello Hello Hello Hello Hello Hello Hello" },
-    { result: assignment2(), expected: "Hamburg Hamburg Hamburg Hamburg Hamburg" },
-    { result: assignment3(), expected: "I love love love love love love love Hamburg" },
-    { result: assignment4(), expected: "0 1 2 3 4 5 6 7 8 9 10" },
-    { result: assignment5(), expected: 500500 },
-    { result: assignment6(), expected: "5 10 15 20 25 30 35 40 45 50" },
-    { result: assignment7(), expected: "Blue" },
-    { result: assignment8(), expected: "I hate JavaScript !" },
-    { result: assignment9(), expected: "I love JavaScript !" },
-    { result: assignment10(), expected: 3 },
-    { result: assignment11(), expected: 5 },
-    { result: assignment12(), expected: 9 }
+const functions = [
+    { result: assignment1("BADEN"), validate: (result) => result === "baden" },
+    { result: assignment2("powell"), validate: (result) => result === "POWELL" },
+    { result: assignment3(" Baden Powell "), validate: (result) => result === "Baden Powell" },
+    { result: assignment4(" Baden Powell "), validate: (result) => result === "baden powell" },
+    { result: assignment5("I have a piano"), validate: (result) => result === "I have a guitar"},
+    { result: assignment6(["guitar", 82, "piano"]), validate: (result) => result === "guitar piano"},
+    { result: assignment7([22, 3, 5, "ukulele"]), validate: (result) => result === 30 },
+    { result: assignment8([true, false, true, 4]), validate: (result) => result === 2 },
+    { result: assignment9([ 23, 45, "hallo", true, false, true ]), validate: (result) => typeof result === "object" && result.booleans === 3 && result.numbers === 2 && result.strings === 1 },
 ];
 
-for(let assignmentIndex = 0; assignmentIndex < results.length; assignmentIndex += 1) {
-    const assignment = results[assignmentIndex];
+for(let assignmentIndex = 0; assignmentIndex < functions.length; assignmentIndex += 1) {
+    const assignment = functions[assignmentIndex];
 
     console.log(`\nAssignment ${assignmentIndex + 1}`)
-    console.log("\n\tResult: ", `<${assignment.result}>`);
+    console.log("\n\tResult: ", `<${JSON.stringify(assignment.result)}>`);
 
-    if(typeof assignment.result === 'string') {
-        assignment.result = assignment.result.trim();
-    }
-
-    if(assignment.result === assignment.expected) {
+    if(assignment.validate(assignment.result)) {
         console.log("\n\tComplete! ".green, "Congratulations!!".rainbow);
     } else {
-        console.log("\n\tIncomplete".underline.red, "Expected:", assignment.expected);
+        console.log("\n\tIncomplete".underline.red);
     }
 }
